@@ -1,0 +1,35 @@
+<section class="checkout">
+  <form class="checkout-form">
+    <h1>Checkout</h1>
+
+    <label>
+      Card number
+      <input type="text" placeholder="1234 1234 1234 1234" />
+    </label>
+
+    <label>
+      Expiration
+      <input type="text" placeholder="MM / YY" />
+    </label>
+
+    <button type="button">Place order</button>
+  </form>
+
+  <aside class="checkout-help">
+    <div class="help-header">
+      <h2>Need help?</h2>
+
+      <button type="button" (click)="toggleHelp()">
+        {{ showHelp() ? 'Hide' : 'Show' }}
+      </button>
+    </div>
+
+    <ng-template [cdkPortalOutlet]="helpPortal()"></ng-template>
+
+    @if (!showHelp()) {
+      <p class="placeholder">
+        Show payment help here while checking out.
+      </p>
+    }
+  </aside>
+</section>
