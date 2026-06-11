@@ -4,7 +4,6 @@ import {
   Component,
   DestroyRef,
   Injector,
-  ViewEncapsulation,
   inject,
   inputBinding,
   signal,
